@@ -1,5 +1,5 @@
 /**
- * C S S  H A N D L E R
+ * C S S  H A N D L E R  1.0
  * 
  * Created by Hegyközi Gergely (Leonuh)
  * Twitter: @leonuh
