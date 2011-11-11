@@ -101,15 +101,16 @@ body {
         font-size: 3em; text-align: right;
     }
 
-    #main_header ol { position: absolute; right: -1.8%; top: 20%; }
-        #main_header ol li a {
-            background: #63ADD0; display: inline-block; padding: 5%;
-            transform: rotate(90deg);
-            transition: all 0.5s;
+    #main_header ol { position: absolute; right: 1%; top: 2%; }
+        #main_header ol li { display: inline-block; }
+            #main_header ol li a {
+                display: inline-block; padding: 5% 10%;
+                transition: all 0.5s;
+                text-shadow: 1px 1px 1px #000;
 
-            color: #034769; font-size: 1.5em; text-decoration: none;
-        }
-        #main_header ol li a:hover { opacity: 0.5; }
+                color: #FF6840; font-size: 1.5em; text-decoration: none;
+            }
+            #main_header ol li a:hover { opacity: 0.5; }
 /* @end */
 
 /* @group C O N T E N T */
