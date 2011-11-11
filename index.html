@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- B A S E -->
+    <script src="js/csshandler.js"></script>
+    <script src="js/prefixfree.min.js"></script>
+    <script src="js/jquery-1.7.min.js"></script>
+
+    <!-- D E P E N D E N C I E S -->
+    <script src="js/jquery.fittext.js"></script>
+
+    <!-- S Y S T E M -->
+    <link href="http://fonts.googleapis.com/css?family=Terminal+Dosis" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script src="js/script.js"></script>
+
+    <title>CSSHANDLER</title>
+</head>
+<body>
+
+    <div id="page">
+        <header id="main_header">
+            <h1>CSSHANDLER <strong>CH</strong></h1>
+            <p>Standalone Javascript in CSS</p>
+            <ol>
+                <li><a href="https://twitter.com/#leonuh" title="Twitter">@leonuh</a></li>
+            </ol>
+        </header>
+        <section id="content">
+            <article id="what_is_this">
+                <a href="#what_is_this"><h2>What is this?</h2></a>
+                <section>
+                    <p>One of the big problems in sitebuilds: You can't make a good group from css and javascript handlers. You need to handle this on many place.</p>
+                    <p>This script is good solution for this on simple way:</p>
+                    <pre data-language="CSS"><code>/* Test function for #test_selector1 handle (this all are javascript) */
+/*ch
+function tester1(selector) {
+    $(selector).click(function(){
+        alert(selector);
+    });
+}
+ch*/
+button#test_selector1 { /*ch tester1('$selector'); */ }
+</code></pre>
+                    <p>Result:</p>
+                    <p>
+                        <style>
+                            /* Test function for #test_selector1 handle (this all are javascript) */
+                            /*ch
+                            function tester1(selector) {
+                                $(selector).click(function(){
+                                    alert(selector);
+                                });
+                            }
+                            ch*/
+                            button#test_selector1 { /*ch tester1('$selector'); */ }
+                        </style>
+                        <button id="test_selector1">Test</button>
+                    </p>
+                </section>
+            </article>
+            <article id="use">
+                <a href="#use"><h2>Use</h2></a>
+                <section>
+                    <ol>
+                        <li>
+                            Include javascript codes:<br />
+                            Pattern:
+                            <pre data-language="CSS"><code>/*ch
+    javascript code what you want to include
+ch*/
+</code></pre>
+                        </li>
+                        <li>
+                            Run javascript codes:<br />
+                            Pattern:
+                            <pre data-language="CSS"><code>/*ch javascript_function_without_spaces [repeat [delay_in_ms]] */</code></pre>
+                            
+                            <br />
+                            Replacable vars:<br />
+                            $selector : called from this selector block<br />
+                            $repeat : called with this repeat number<br />
+                            $delay : called with this delay time<br />
+                            $counter : repeat cycle counter
+                        </li>
+                        <li>
+                            Easy sample with jquery:
+                            <pre data-language="CSS"><code>#test_selector2 { /*ch $('$selector').html($('$selector').html()-1); 60 1000 */ }</code></pre>
+                            <style>
+                                #test_selector2 { /*ch $('$selector').html($('$selector').html()-1); 60 1000 */ }
+                            </style>
+                            <span id="test_selector2">60</span>
+                        </li>
+                    </ol>
+                </section>
+            </article>
+            <article id="faq">
+                <a href="#faq"><h2>Faq</h2></a>
+                <section>
+                    <ul>
+                        <li>
+                            <h3>How do I enable local testing?</h3>
+                            <p>http://leaverou.github.com/prefixfree/#faq</p>
+                        </li>
+                        <li>
+                            <h3>Browser support</h3>
+                            <p>All modern browsers + ie9, if you need any support, write me</p>
+                        </li>
+                    </ul>
+                </section>
+            </article>
+        </section>
+        <footer id="main_footer">
+            Full responsive page for modern browsers
+        </footer>
+    </div>
+
+</body>
+</html>
